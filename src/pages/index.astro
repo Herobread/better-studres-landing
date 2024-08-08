@@ -1,9 +1,42 @@
 ---
+import { Image } from "astro:assets";
+import polygonBg from "../images/polygon-bg.png";
+import FeatureSection from "../layouts/FeatureSection.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Better studres">
   <main>
-    <h1>Better studres</h1>
+    <section class="min-h-screen lg:grid lg:grid-cols-2">
+      <div>
+        <h1>Better studres</h1>
+        <p>
+          Browser extension to improve your Studres experience. New sleek design
+          and tools for enhanced productivity.
+        </p>
+        <div>
+          <a>Chrome</a>
+          <a>Firefox</a>
+        </div>
+      </div>
+      <Image src={polygonBg} alt={""} />
+    </section>
+    <FeatureSection>
+      <h2>Improved UI</h2>
+      <p>Completely overhauled for a smoother user experience.</p>
+    </FeatureSection>
+    <FeatureSection>
+      <h2>Pin links</h2>
+      <p>Add frequently used links for quick access.</p>
+    </FeatureSection>
+    <FeatureSection>
+      <h2>Download files & folders</h2>
+      <p>Just right-click and select "Download" on a file.</p>
+    </FeatureSection>
+    <FeatureSection>
+      <h2>Dark mode</h2>
+      <p>Reduce eye strain with a sleek dark mode.</p>
+    </FeatureSection>
+    <section></section>
   </main>
 </Layout>
