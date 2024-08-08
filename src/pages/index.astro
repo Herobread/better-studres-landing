@@ -73,10 +73,36 @@ import Layout from "../layouts/Layout.astro";
           class="absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 z-0"
         />
       </div>
+      <div class="fixed top-3 left-4 z-50" id="rainbow-bar">
+        dasdsadsadsadsa
+      </div>
+      <script>
+        document.addEventListener("scroll", function () {
+          const image = document.getElementById("new-design");
+          const rainbowBar = document.getElementById("rainbow-bar");
+          if (!image || !rainbowBar) {
+            return;
+          }
+          const boundingRect = image.getBoundingClientRect();
+          const imageTop = boundingRect.top;
+          const imageBottom = boundingRect.bottom;
+
+          const windowHeight = document.documentElement.clientHeight;
+
+          const isImageTouchingBottom =
+            imageTop < windowHeight && windowHeight < imageBottom;
+          if (isImageTouchingBottom) {
+            rainbowBar.classList.remove("hidden");
+          } else {
+            rainbowBar.classList.add("hidden");
+          }
+        });
+      </script>
       <div class="w-full justify-center flex">
         <Image
           src={newDesign}
           alt={"new desing of studres"}
+          id="new-design"
           class={"z-20 rounded-3xl"}
         />
       </div>
