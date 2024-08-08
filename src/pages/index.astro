@@ -4,6 +4,8 @@ import IconLink from "../components/IconLink.astro";
 import icon from "../images/better-studres-icon.svg";
 import chromeIcon from "../images/chrome.svg";
 import firefoxIcon from "../images/firefox.svg";
+import newDesign from "../images/new-design.png";
+import oldDesign from "../images/old-design.png";
 import polygonBg from "../images/polygon-bg.png";
 import FeatureSection from "../layouts/FeatureSection.astro";
 import Layout from "../layouts/Layout.astro";
@@ -14,7 +16,12 @@ import Layout from "../layouts/Layout.astro";
     <section class="min-h-screen lg:grid lg:grid-cols-2">
       <div class="place-content-center grid min-h-screen">
         <div class="max-w-md m-3 space-y-4">
-          <Image src={icon} alt={"Better studres logo"} class="m-[-10px]" />
+          <Image
+            src={icon}
+            alt={"Better studres logo"}
+            class="m-[-10px]"
+            loading={"eager"}
+          />
           <div class="space-y-1">
             <h1 class="font-bold text-6xl">Better studres</h1>
             <p class="leading-6">
@@ -40,6 +47,7 @@ import Layout from "../layouts/Layout.astro";
       <div class="hidden lg:block">
         <div class="relative w-full h-full overflow-hidden">
           <Image
+            loading={"eager"}
             src={polygonBg}
             alt={""}
             class="absolute top-0 left-0 w-full h-full object-cover"
@@ -51,22 +59,28 @@ import Layout from "../layouts/Layout.astro";
         </div>
       </div>
     </section>
-    <FeatureSection>
-      <h2>Improved UI</h2>
-      <p>Completely overhauled for a smoother user experience.</p>
-    </FeatureSection>
-    <FeatureSection>
-      <h2>Pin links</h2>
-      <p>Add frequently used links for quick access.</p>
-    </FeatureSection>
-    <FeatureSection>
-      <h2>Download files & folders</h2>
-      <p>Just right-click and select "Download" on a file.</p>
-    </FeatureSection>
-    <FeatureSection>
-      <h2>Dark mode</h2>
-      <p>Reduce eye strain with a sleek dark mode.</p>
-    </FeatureSection>
-    <section></section>
+    <section class="min-h-[175vh] relative">
+      <div class="sticky top-0 min-h-screen z-10">
+        <div class="w-full grid justify-center px-3 text-center space-y-2 py-6">
+          <h2 class="text-4xl font-bold">Improved UI</h2>
+          <p class="max-w-prose">
+            Completely overhauled for a smoother user experience.
+          </p>
+        </div>
+        <Image
+          src={oldDesign}
+          alt={"old desing of studres"}
+          class="absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 z-0"
+        />
+      </div>
+      <div class="w-full justify-center flex">
+        <Image
+          src={newDesign}
+          alt={"new desing of studres"}
+          class={"z-20 rounded-3xl"}
+        />
+      </div>
+    </section>
+    <FeatureSection />
   </main>
 </Layout>
