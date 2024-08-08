@@ -73,8 +73,10 @@ import Layout from "../layouts/Layout.astro";
           class="absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 z-0"
         />
       </div>
-      <div class="fixed top-3 left-4 z-50" id="rainbow-bar">
-        dasdsadsadsadsa
+      <div
+        class="fixed h-8 bottom-[-16px] left-0 w-[50vw] ease-in-out duration-300 transition-opacity translate-x-[50%] bg-rainbow-gradient z-50 blur-2xl animate-scroll-x bg-200%"
+        id="rainbow-bar"
+      >
       </div>
       <script>
         document.addEventListener("scroll", function () {
@@ -92,9 +94,9 @@ import Layout from "../layouts/Layout.astro";
           const isImageTouchingBottom =
             imageTop < windowHeight && windowHeight < imageBottom;
           if (isImageTouchingBottom) {
-            rainbowBar.classList.remove("hidden");
+            rainbowBar.classList.remove("opacity-0");
           } else {
-            rainbowBar.classList.add("hidden");
+            rainbowBar.classList.add("opacity-0");
           }
         });
       </script>
