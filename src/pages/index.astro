@@ -4,6 +4,8 @@ import IconLink from "../components/IconLink.astro";
 import icon from "../images/better-studres-icon.svg";
 import chromeIcon from "../images/chrome.svg";
 import firefoxIcon from "../images/firefox.svg";
+import logoSad from "../images/logo-sad.svg";
+import oldDesign from "../images/old-design.png";
 import polygonBg from "../images/polygon-bg.png";
 import Layout from "../layouts/Layout.astro";
 ---
@@ -56,6 +58,21 @@ import Layout from "../layouts/Layout.astro";
         </div>
       </div>
     </section>
-    <section class="min-h-screen"></section>
+    <section class="min-h-96 lg:grid lg:grid-cols-2">
+      <div class="grid place-content-center space-y-3">
+        <Image src={logoSad} alt="" class="m-[-10px]" />
+        <h2 class="text-4xl font-bold max-w-[450px]">
+          Fed up with navigating that outdated and clunky UI?
+        </h2>
+      </div>
+      <div class="grid justify-center items-end">
+        <Image
+          src={oldDesign}
+          alt="old design"
+          height={300}
+          class="shadow-lg rounded-t-2xl"
+        />
+      </div>
+    </section>
   </main>
 </Layout>
