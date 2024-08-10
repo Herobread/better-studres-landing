@@ -16,7 +16,9 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title="Better studres">
   <main class="max-w-screen-lg mx-auto px-5">
-    <section class="min-h-screen flex flex-col justify-center space-y-4">
+    <section
+      class="min-h-screen 2xl:min-h-section flex flex-col justify-center space-y-4"
+    >
       <Image src={icon} class="m-[-10px]" alt={"Better studres logo"} />
       <div class="space-y-2">
         <h1 class="font-bold text-6xl">Better Studres</h1>
@@ -38,46 +40,48 @@ import Layout from "../layouts/Layout.astro";
         >
       </div>
     </section>
-    <section class="min-h-screen flex flex-col justify-center gap-10">
+    <section
+      class="min-h-screen 2xl:min-h-section flex flex-col justify-center gap-10"
+    >
       <div class="">
-        <h2 class="font-bold text-4xl">New Features</h2>
-        <p>Boost your productivity</p>
+        <h2 class="font-bold text-4xl">Features</h2>
+        <p>Tools and enhancements designed to elevate your workflow.</p>
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
         <Feature
           image={cloudDownload}
           header="File Downloads"
-          description="Download files instantly with just a right click. No SSH setup or cookies, just quick and easy access to material."
+          description="Download files instantly with just a right click - no SSH setup or cookies required. Quick and easy access to your materials."
         />
 
         <Feature
           image={fileStack}
-          header="File management"
-          description="Organize with tags and notes, find any visited folder with search in command pallet."
+          header="File Management"
+          description="Organize your files with tags and notes, and easily find any visited folder using the search in the command palette."
         />
 
         <Feature
           image={moon}
-          header="Dark mode"
-          description="Reduce eye strain and get a comfortable viewing experience, especially in low-light settings."
+          header="Dark Mode"
+          description="Reduce eye strain and enjoy a comfortable viewing experience, especially in low-light settings."
         />
 
         <Feature
           image={code}
-          header="Code highlighting"
-          description="Syntax highlighting for clearer and faster code understanding."
+          header="Code Highlighting"
+          description="Enhance code readability and comprehension with syntax highlighting."
         />
 
         <Feature
           image={pin}
-          header="Pinned links"
-          description="Pin your most frequently used links at the top for easy and quick navigation whenever you need them."
+          header="Pinned Links"
+          description="Pin frequently used links at the top for quick and easy access."
         />
 
         <Feature
           image={github}
-          header="Fully open source"
-          description="Transparent, community-driven development with code you can trust."
+          header="Fully Open Source"
+          description="Benefit from transparent, community-driven development with code you can trust."
         />
       </div>
     </section>
