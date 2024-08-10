@@ -12,7 +12,7 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Better studres">
-  <main class="max-w-screen-lg mx-auto">
+  <main class="max-w-screen-lg mx-auto px-5">
     <section class="min-h-screen flex flex-col justify-center">
       <Image src={icon} class="m-[-10px]" alt={"Better studres logo"} />
       <h1 class="font-bold text-6xl">Better Studres</h1>
@@ -20,13 +20,14 @@ import Layout from "../layouts/Layout.astro";
         Browser extension to improve your Studres experience. <br /> New sleek design
         and tools for enhanced productivity.
       </p>
+      <div></div>
     </section>
     <section class="min-h-screen flex flex-col justify-center gap-10">
       <div class="">
         <h2 class="font-bold text-4xl">New Features</h2>
         <p>Boost your productivity</p>
       </div>
-      <div class="grid grid-cols-3 gap-16">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
         <Feature
           image={cloudDownload}
           header="File Downloads"
