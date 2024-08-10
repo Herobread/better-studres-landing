@@ -2,16 +2,16 @@
 import { Image } from "astro:assets";
 
 interface Props {
-  src: any;
+  image: any;
   header: string;
   description: string;
 }
 
-const { description, header, src } = Astro.props;
+const { description, header, image } = Astro.props;
 ---
 
 <div class="space-y-1">
-  <Image src={src} alt="" class="w-9 h-9" />
+  <Image src={image} alt="" class="w-9 h-9" />
   <h3 class="text-xl font-bold">{header}</h3>
   <p>{description}</p>
 </div>
