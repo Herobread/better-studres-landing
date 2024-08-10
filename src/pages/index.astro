@@ -1,7 +1,10 @@
 ---
 import { Image } from "astro:assets";
 import Feature from "../components/Feature.astro";
+import IconLink from "../components/IconLink.astro";
 import icon from "../images/better-studres-icon.svg";
+import chromeIcon from "../images/chrome.svg";
+import firefoxIcon from "../images/firefox.svg";
 import cloudDownload from "../images/icons/cloud-download.svg";
 import code from "../images/icons/code.svg";
 import fileStack from "../images/icons/file-stack.svg";
@@ -13,14 +16,27 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title="Better studres">
   <main class="max-w-screen-lg mx-auto px-5">
-    <section class="min-h-screen flex flex-col justify-center">
+    <section class="min-h-screen flex flex-col justify-center space-y-4">
       <Image src={icon} class="m-[-10px]" alt={"Better studres logo"} />
-      <h1 class="font-bold text-6xl">Better Studres</h1>
-      <p>
-        Browser extension to improve your Studres experience. <br /> New sleek design
-        and tools for enhanced productivity.
-      </p>
-      <div></div>
+      <div class="space-y-2">
+        <h1 class="font-bold text-6xl">Better Studres</h1>
+        <p>
+          Browser extension to improve your Studres experience. <br /> New sleek
+          design and tools for enhanced productivity.
+        </p>
+      </div>
+      <div class="flex space-x-2">
+        <IconLink
+          src={chromeIcon}
+          href="https://chromewebstore.google.com/detail/better-studres/kamnhbpjhhhjlbandgpngdnplledombg"
+          >Chrome</IconLink
+        >
+        <IconLink
+          src={firefoxIcon}
+          href="https://addons.mozilla.org/en-GB/firefox/addon/better-studres/"
+          >Firefox</IconLink
+        >
+      </div>
     </section>
     <section class="min-h-screen flex flex-col justify-center gap-10">
       <div class="">
