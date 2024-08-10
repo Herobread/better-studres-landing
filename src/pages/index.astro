@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets";
+import Feature from "../components/Feature.astro";
 import icon from "../images/better-studres-icon.svg";
 import cloudDownload from "../images/icons/cloud-download.svg";
 import code from "../images/icons/code.svg";
@@ -26,50 +27,41 @@ import Layout from "../layouts/Layout.astro";
         <p>Boost your productivity</p>
       </div>
       <div class="grid grid-cols-3 gap-16">
-        <div>
-          <Image src={cloudDownload} alt="" class="w-9 h-9" />
-          <h3 class="text-xl font-bold">File Downloads</h3>
-          <p>
-            Download files instantly with just a right click. No SSH setup or
-            cookies, just quick and easy access to material.
-          </p>
-        </div>
-        <div>
-          <Image src={fileStack} alt="" class="w-9 h-9" />
-          <h3 class="text-xl font-bold">File management</h3>
-          <p>
-            Organize with tags and notes, find any visited folder with search in
-            command pallet.
-          </p>
-        </div>
-        <div>
-          <Image src={moon} alt="" class="w-9 h-9" />
-          <h3 class="text-xl font-bold">Dark mode</h3>
-          <p>
-            Reduce eye strain and get a comfortable viewing experience,
-            especially in low-light settings.
-          </p>
-        </div>
-        <div>
-          <Image src={code} alt="" class="w-9 h-9" />
-          <h3 class="text-xl font-bold">Code highlighting</h3>
-          <p>Syntax highlighting for clearer and faster code understanding.</p>
-        </div>
-        <div>
-          <Image src={pin} alt="" class="w-9 h-9" />
-          <h3 class="text-xl font-bold">Pinned links</h3>
-          <p>
-            Pin your most frequently used links at the top for easy and quick
-            navigation whenever you need them.
-          </p>
-        </div>
-        <div>
-          <Image src={github} alt="" class="w-9 h-9" />
-          <h3 class="text-xl font-bold">Fully open source</h3>
-          <p>
-            Transparent, community-driven development with code you can trust.
-          </p>
-        </div>
+        <Feature
+          src={cloudDownload}
+          header="File Downloads"
+          description="Download files instantly with just a right click. No SSH setup or cookies, just quick and easy access to material."
+        />
+
+        <Feature
+          src={fileStack}
+          header="File management"
+          description="Organize with tags and notes, find any visited folder with search in command pallet."
+        />
+
+        <Feature
+          src={moon}
+          header="Dark mode"
+          description="Reduce eye strain and get a comfortable viewing experience, especially in low-light settings."
+        />
+
+        <Feature
+          src={code}
+          header="Code highlighting"
+          description="Syntax highlighting for clearer and faster code understanding."
+        />
+
+        <Feature
+          src={pin}
+          header="Pinned links"
+          description="Pin your most frequently used links at the top for easy and quick navigation whenever you need them."
+        />
+
+        <Feature
+          src={github}
+          header="Fully open source"
+          description="Transparent, community-driven development with code you can trust."
+        />
       </div>
     </section>
   </main>
