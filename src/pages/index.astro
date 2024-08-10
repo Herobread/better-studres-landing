@@ -1,75 +1,63 @@
 ---
 import { Image } from "astro:assets";
-import IconLink from "../components/IconLink.astro";
 import icon from "../images/better-studres-icon.svg";
-import chromeIcon from "../images/chrome.svg";
-import firefoxIcon from "../images/firefox.svg";
-import oldDesign from "../images/old-design.png";
-import polygonBg from "../images/polygon-bg.png";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Better studres">
-  <main>
-    <section class="min-h-screen lg:grid lg:grid-cols-2">
-      <div class="place-content-center grid min-h-screen">
-        <div class="max-w-md m-3 space-y-4">
-          <Image
-            src={icon}
-            alt={"Better studres logo"}
-            class="m-[-10px]"
-            loading={"eager"}
-          />
-          <div class="space-y-1">
-            <h1 class="font-bold text-6xl">Better studres</h1>
-            <p class="leading-6">
-              Browser extension to improve your Studres experience.
-              <br />
-              New sleek design and tools for enhanced productivity.
-            </p>
-          </div>
-          <div class="flex space-x-2">
-            <IconLink
-              src={chromeIcon}
-              href="https://chromewebstore.google.com/detail/better-studres/kamnhbpjhhhjlbandgpngdnplledombg"
-              >Chrome</IconLink
-            >
-            <IconLink
-              src={firefoxIcon}
-              href="https://addons.mozilla.org/en-GB/firefox/addon/better-studres/"
-              >Firefox</IconLink
-            >
-          </div>
-        </div>
-      </div>
-      <div class="hidden lg:block">
-        <div class="relative w-full h-full overflow-hidden">
-          <Image
-            loading={"eager"}
-            src={polygonBg}
-            alt={""}
-            class="absolute top-0 left-0 w-full h-full object-cover"
-          />
-          <div
-            class="bg-gradient-to-tr from-white to-transparent absolute top-0 left-0 w-full h-full"
-          >
-          </div>
-        </div>
-      </div>
+  <main class="max-w-screen-lg mx-auto">
+    <section class="min-h-screen flex flex-col justify-center">
+      <Image src={icon} class="m-[-10px]" alt={"Better studres logo"} />
+      <h1 class="font-bold text-6xl">Better Studres</h1>
+      <p>
+        Browser extension to improve your Studres experience. <br /> New sleek design
+        and tools for enhanced productivity.
+      </p>
     </section>
-    <section class="min-h-96 lg:grid lg:grid-cols-2">
-      <div class="grid place-content-center space-y-3 min-h-[300px]">
-        <h2 class="text-4xl font-bold max-w-[450px]">
-          Fed up with navigating this outdated and clunky UI?
-        </h2>
+    <section class="min-h-screen flex flex-col justify-center gap-10">
+      <div class="">
+        <h2 class="font-bold text-4xl">New Features</h2>
+        <p>Boost your productivity</p>
       </div>
-      <div class="grid justify-center items-end">
-        <Image
-          src={oldDesign}
-          alt="old design"
-          height={300}
-          class="shadow-lg rounded-t-2xl"
-        />
+      <div class="grid grid-cols-3 gap-16">
+        <div>
+          <h3 class="text-xl font-bold">File Downloads</h3>
+          <p>
+            Download files instantly with just a right click. No SSH setup or
+            cookies, just quick and easy access to material.
+          </p>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold">File management</h3>
+          <p>
+            Organize with tags and notes, find any visited folder with search in
+            command pallet.
+          </p>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold">Dark mode</h3>
+          <p>
+            Reduce eye strain and get a comfortable viewing experience,
+            especially in low-light settings.
+          </p>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold">Code highlighting</h3>
+          <p>Syntax highlighting for clearer and faster code understanding.</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold">Pinned links</h3>
+          <p>
+            Pin your most frequently used links at the top for easy and quick
+            navigation whenever you need them.
+          </p>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold">Fully open source</h3>
+          <p>
+            Transparent, community-driven development with code you can trust.
+          </p>
+        </div>
       </div>
     </section>
   </main>
