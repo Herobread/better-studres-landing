@@ -1,87 +1,12 @@
 ---
-import { Image } from "astro:assets";
-import Feature from "../components/Feature.astro";
-import IconLink from "../components/IconLink.astro";
-import icon from "../images/better-studres-icon.svg";
-import chromeIcon from "../images/chrome.svg";
-import firefoxIcon from "../images/firefox.svg";
-import cloudDownload from "../images/icons/cloud-download.svg";
-import code from "../images/icons/code.svg";
-import fileStack from "../images/icons/file-stack.svg";
-import github from "../images/icons/github.svg";
-import moon from "../images/icons/moon.svg";
-import pin from "../images/icons/pin.svg";
-import Layout from "../layouts/Layout.astro";
+import Features from "@/components/sections/Features.astro";
+import Hero from "@/components/sections/Hero.astro";
+import Layout from "@/layouts/Layout.astro";
 ---
 
 <Layout title="Better studres">
   <main class="max-w-screen-lg mx-auto px-5 py-5">
-    <section
-      class="min-h-screen 3xl:min-h-[700px] flex flex-col justify-center space-y-4"
-    >
-      <Image src={icon} class="m-[-10px]" alt={"Better studres logo"} />
-      <div class="space-y-2">
-        <h1 class="font-bold text-4xl lg:text-6xl">Better Studres</h1>
-        <p>
-          Browser extension that improves Studres. <br />
-          New sleek design and tools for enhanced productivity.
-        </p>
-      </div>
-      <div class="flex gap-2 flex-wrap">
-        <IconLink
-          src={chromeIcon}
-          href="https://chromewebstore.google.com/detail/better-studres/kamnhbpjhhhjlbandgpngdnplledombg"
-          >Chrome</IconLink
-        >
-        <IconLink
-          src={firefoxIcon}
-          href="https://addons.mozilla.org/en-GB/firefox/addon/better-studres/"
-          >Firefox</IconLink
-        >
-      </div>
-    </section>
-    <section class="space-y-10 py-5">
-      <div class="space-y-1">
-        <h2 class="font-bold text-3xl lg:text-4xl">Features</h2>
-        <p>Tools and enhancements designed to elevate your workflow.</p>
-      </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-        <Feature
-          image={cloudDownload}
-          header="File Downloads"
-          description="Download files instantly with just a right click - no SSH setup or cookies required. Quick and easy access to your materials."
-        />
-
-        <Feature
-          image={fileStack}
-          header="File Management"
-          description="Organize your files with tags and notes, and easily find any visited folder using the search in the command palette."
-        />
-
-        <Feature
-          image={moon}
-          header="Dark Mode"
-          description="Reduce eye strain and enjoy a comfortable viewing experience, especially in low-light settings."
-        />
-
-        <Feature
-          image={code}
-          header="Code Highlighting"
-          description="Enhance code readability and comprehension with syntax highlighting."
-        />
-
-        <Feature
-          image={pin}
-          header="Pinned Links"
-          description="Pin frequently used links at the top for quick and easy access."
-        />
-
-        <Feature
-          image={github}
-          header="Fully Open Source"
-          description="Benefit from transparent, community-driven development with code you can trust."
-        />
-      </div>
-    </section>
+    <Hero />
+    <Features />
   </main>
 </Layout>
