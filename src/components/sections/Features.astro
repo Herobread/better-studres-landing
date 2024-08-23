@@ -9,46 +9,48 @@ import moon from "@/images/icons/moon.svg";
 import pin from "@/images/icons/pin.svg";
 ---
 
-<section class="space-y-10 py-5">
-  <div class="space-y-1">
-    <H2>Features</H2>
-    <p>Tools and enhancements designed to elevate your workflow.</p>
-  </div>
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-    <Feature
-      image={cloudDownload}
-      header="File Downloads"
-      description="Download files instantly with just a right click - no SSH setup or cookies required. Quick and easy access to study materials."
-    />
+<section class="min-h-screen grid items-center">
+  <div class="py-5 space-y-8">
+    <div class="space-y-1">
+      <H2>New Features</H2>
+      <p>Tools and enhancements designed to elevate your workflow.</p>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+      <Feature
+        image={cloudDownload}
+        header="File Downloads"
+        description="Download files instantly with just a right click - no SSH setup or cookies required. Quick and easy access to study materials."
+      />
 
-    <Feature
-      image={fileStack}
-      header="File Management"
-      description="Organize your files with tags and notes, and easily find any visited folder using the search in the command palette."
-    />
+      <Feature
+        image={fileStack}
+        header="File Management"
+        description="Organize your files with tags and notes, and easily find any visited folder using the search in the command palette."
+      />
 
-    <Feature
-      image={moon}
-      header="Dark Mode"
-      description="Reduce eye strain and enjoy a comfortable viewing experience, especially in low-light settings."
-    />
+      <Feature
+        image={moon}
+        header="Dark Mode"
+        description="Reduce eye strain and enjoy a comfortable viewing experience, especially in low-light settings."
+      />
 
-    <Feature
-      image={code}
-      header="Code Highlighting"
-      description="Enhance code readability and comprehension with syntax highlighting."
-    />
+      <Feature
+        image={code}
+        header="Code Highlighting"
+        description="Enhance code readability and comprehension with syntax highlighting."
+      />
 
-    <Feature
-      image={pin}
-      header="Pinned Links"
-      description="Pin frequently used links at the top for quick and easy access."
-    />
+      <Feature
+        image={pin}
+        header="Pinned Links"
+        description="Pin frequently used links at the top for quick and easy access."
+      />
 
-    <Feature
-      image={github}
-      header="Fully Open Source"
-      description="Benefit from transparent, community-driven development with code you can trust."
-    />
+      <Feature
+        image={github}
+        header="Fully Open Source"
+        description="Benefit from transparent, community-driven development with code you can trust."
+      />
+    </div>
   </div>
 </section>
