@@ -1,0 +1,24 @@
+---
+import H2 from "@/components/typography/H2.astro";
+import newUi from "@/images/new-ui.png";
+import { Image } from "astro:assets";
+---
+
+<section class="grid items-center min-h-screen">
+  <div class="grid md:grid-cols-2 md:items-center py-5 items-center gap-8">
+    <div class="space-y-2">
+      <H2>It's time for an upgrade.</H2>
+      <p>
+        A fully redesigned user experience. <br /> Made for maximum efficiency and
+        productivity.
+      </p>
+    </div>
+    <div>
+      <Image
+        src={newUi}
+        alt={"new studres UI"}
+        class={"shadow-xl rounded-xl"}
+      />
+    </div>
+  </div>
+</section>
