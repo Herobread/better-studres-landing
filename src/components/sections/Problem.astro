@@ -4,11 +4,18 @@ import oldUi from "@/images/old-ui.png";
 import { Image } from "astro:assets";
 ---
 
-<section class="lg:grid lg:grid-cols-2 lg:items-center py-5">
-  <div>
-    <H2>Fed up with navigating this outdated and clunky UI?</H2>
-  </div>
-  <div>
-    <Image src={oldUi} alt={"old UI of studres"} height={350} />
+<section class="grid items-center min-h-screen">
+  <div class="grid md:grid-cols-2 md:items-center py-5 items-center gap-8">
+    <div>
+      <H2>Fed up with navigating <br /> outdated and clunky UI?</H2>
+    </div>
+    <div>
+      <Image
+        src={oldUi}
+        alt={"old UI of studres"}
+        height={350}
+        class={"shadow-xl rounded-xl"}
+      />
+    </div>
   </div>
 </section>
