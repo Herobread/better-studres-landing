@@ -1,0 +1,24 @@
+---
+import IconLink from "@/components/IconLink.astro";
+import H2 from "@/components/typography/H2.astro";
+import chromeIcon from "@/images/chrome.svg";
+import firefoxIcon from "@/images/firefox.svg";
+---
+
+<section class="min-h-screen grid items-center">
+  <div class="space-y-4 flex justify-center flex-col">
+    <H2>Improve your studres experience now</H2>
+    <div class="flex gap-2 flex-wrap">
+      <IconLink
+        src={chromeIcon}
+        href="https://chromewebstore.google.com/detail/better-studres/kamnhbpjhhhjlbandgpngdnplledombg"
+        >Chrome</IconLink
+      >
+      <IconLink
+        src={firefoxIcon}
+        href="https://addons.mozilla.org/en-GB/firefox/addon/better-studres/"
+        >Firefox</IconLink
+      >
+    </div>
+  </div>
+</section>
