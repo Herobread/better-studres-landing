@@ -1,5 +1,6 @@
 ---
 import IconLink from "@/components/IconLink.astro";
+import H1 from "@/components/typography/H1.astro";
 import chromeIcon from "@/images/chrome.svg";
 import firefoxIcon from "@/images/firefox.svg";
 ---
@@ -62,7 +63,7 @@ import firefoxIcon from "@/images/firefox.svg";
     </defs>
   </svg>
   <div class="space-y-2">
-    <h1 class="font-bold text-4xl lg:text-6xl">Better Studres</h1>
+    <H1>Better Studres</H1>
     <p>
       Browser extension that improves Studres. <br />
       New sleek design and tools for enhanced productivity.
@@ -70,14 +71,14 @@ import firefoxIcon from "@/images/firefox.svg";
   </div>
   <div class="flex gap-2 flex-wrap">
     <IconLink
-        image={chromeIcon}
-        href="https://chromewebstore.google.com/detail/better-studres/kamnhbpjhhhjlbandgpngdnplledombg"
-        >Chrome</IconLink
-      >
-      <IconLink
-        image={firefoxIcon}
-        href="https://addons.mozilla.org/en-GB/firefox/addon/better-studres/"
-        >Firefox</IconLink
-      >
+      image={chromeIcon}
+      href="https://chromewebstore.google.com/detail/better-studres/kamnhbpjhhhjlbandgpngdnplledombg"
+      >Chrome</IconLink
+    >
+    <IconLink
+      image={firefoxIcon}
+      href="https://addons.mozilla.org/en-GB/firefox/addon/better-studres/"
+      >Firefox</IconLink
+    >
   </div>
 </section>

@@ -1,0 +1,43 @@
+---
+import QA from "@/components/faq/QA.astro";
+import NavBar from "@/components/NavBar.astro";
+import Layout from "@/layouts/Layout.astro";
+---
+
+<Layout title="Better Studres - FAQ">
+  <NavBar />
+  <main class="max-w-screen-lg mx-auto px-5 pt-14 space-y-4 pb-10">
+    <h1 class="font-bold text-4xl">FAQ</h1>
+    <div class="space-y-10">
+      <QA
+        question="Is Better Studres secure?"
+        answer="Yes, Better Studres is secure. It is not a hosted website that exposes resources to the external world. Instead, it functions as a browser extension that runs locally on page load. The extension does not have access to any login credentials, nor does it send any requests outside of your browser. All operations are performed within the context of the local machine, ensuring that all data stays private and secure."
+      />
+
+      <QA
+        question="How does Better Studres work?"
+        answer="Better Studres is a browser extension that integrates directly with the Studres platform. It activates automatically when the Studres page loads and uses JavaScript to modify and enhance the interface. The extension provides additional styling, improved navigation, and useful shortcuts to optimize your experience, making it easier to access and interact with content."
+      />
+
+      <QA
+        question="What tech stack is used in Better Studres?"
+        answer="Vite, React, TypeScript, Tailwind CSS, shadcn UI, TanStack Query, Nice Modal React, React Syntax Highlighter"
+      />
+
+      <QA
+        question="Can I contribute to the project?"
+        answer="Yes, Better Studres is open-source, and we welcome contributions. Please check GitHub repository for any open issues."
+      />
+
+      <QA
+        question="Where can I report issues or provide feedback?"
+        answer="You can report issues or provide feedback through GitHub issues or by Google form or on the product page in chrome or firefox"
+      />
+
+      <QA
+        question="Can I suggest any features?"
+        answer="Yes, but keep in mind the main goal of Better Studres - save you time, not take more of it. Many features were cut because they didn’t fit this philosophy, so suggestions are welcome but carefully evaluated."
+      />
+    </div>
+  </main>
+</Layout>
