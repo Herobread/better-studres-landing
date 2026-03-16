@@ -36,17 +36,20 @@ import firefoxIcon from "@/images/firefox.svg";
       }
 
       @keyframes gradient-flow {
-        /* The animation runs for the first 50% of the total time (5s) */
         0% {
           background-position: 0% center;
+          filter: brightness(1);
         }
+        45% {
+          filter: brightness(1.2);
+        } /* Slight pop during movement */
         50% {
           background-position: 200% center;
+          filter: brightness(1);
         }
-
-        /* It stays at 200% for the remaining 50% of the time (the 5s pause) */
         100% {
           background-position: 200% center;
+          filter: brightness(1);
         }
       }
 
